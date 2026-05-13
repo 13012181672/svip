@@ -1,12 +1,12 @@
 {
   "storeHouse": [
     {
-      "sourceName": "影仓之精选单仓",
-      "sourceUrl": "https://16756.kstore.space/qlys_JXDC.json"
-    },
-    {
       "sourceName": "影仓之讴歌单仓",
       "sourceUrl": "https://xn--zq2ao005e.u.xn--dkw.xn--6qq986b3xl/apia.php?id=2"
+    },
+    {
+      "sourceName": "影仓之精选单仓",
+      "sourceUrl": "https://16756.kstore.space/qlys_JXDC.json"
     },
     {
       "sourceName": "影仓之全网单仓",
