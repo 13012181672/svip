@@ -1,55 +1,778 @@
-//  >>> 当前时间是：2026-05-14 20:39:42 <<<
+//  >>> 当前时间是：2026-05-14 20:43:17 <<<
 //  秋水导航【官网：www.qiushui.vip】！！！
-//  当前接口：https://xn--zq2ao005e.u.xn--dkw.xn--6qq986b3xl/apia.php?id=2
+//  当前接口：https://xn--qoqw77q.top/
 
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="360-analysis-id" content="1k1c1k1e39331c2v">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<meta name="description" content="滴稳代码分享，分享简单的Python代码">
+		<meta name="keywords" content="滴稳代码分享, Python, 代码分享">
+		<link rel="shortcut icon" type="image/x-icon" href="static/picture/favicon.png">
+		<link rel="stylesheet" type="text/css" href="static/css/h.9c69ed6c.css">
+		<link rel="stylesheet" type="text/css" href="static/css/shijian.css">		
+		<link rel="stylesheet" type="text/css" href="static/css/nekotora.99cf6f8c.css">
+		<link rel="stylesheet" type="text/css" href="static/css/beijing.css">
+		<!-- 引入必要的外部资源 -->
+		<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<title>滴稳代码分享</title>		
+		<!-- 自定义样式 -->
+		<style>
+			/* 代码分享区域样式 */
+			.code-sharing {
+				padding: 40px 0;
+				background-color: rgba(255, 255, 255, 0.03);
+				margin: 20px 0;
+				border-radius: 8px;
+			}
+			.code-card {
+				background-color: rgba(255, 255, 255, 0.05);
+				border-radius: 8px;
+				overflow: hidden;
+				transition: all 0.3s ease;
+				margin-bottom: 20px;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+			}
+			.code-card:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+			}
+			.code-header {
+				padding: 15px 20px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.code-category {
+				font-size: 12px;
+				padding: 3px 8px;
+				border-radius: 4px;
+				margin-bottom: 8px;
+				display: inline-block;
+			}
+			.code-title {
+				font-size: 18px;
+				font-weight: 600;
+				margin: 0;
+			}
+			.code-content {
+				padding: 0 20px 20px;
+			}
+			.code-block {
+				background-color: rgba(0, 0, 0, 0.3);
+				border-radius: 6px;
+				padding: 15px;
+				overflow-x: auto;
+				font-family: 'Fira Code', monospace;
+				font-size: 14px;
+				line-height: 1.6;
+			}
+			.code-footer {
+				padding: 15px 20px;
+				border-top: 1px solid rgba(255, 255, 255, 0.08);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.author-info {
+				display: flex;
+				align-items: center;
+			}
+			.author-avatar {
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				margin-right: 10px;
+			}
+			.code-stats {
+				display: flex;
+				gap: 15px;
+				font-size: 14px;
+				color: #888;
+			}
+			.code-stats span {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+			.view-toggle {
+				display: flex;
+				gap: 10px;
+			}
+			.view-btn {
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: rgba(255, 255, 255, 0.05);
+				border: none;
+				color: #888;
+				cursor: pointer;
+				transition: all 0.2s ease;
+			}
+			.view-btn:hover, .view-btn.active {
+				color: #fff;
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+			.grid-layout {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 20px;
+			}
+			@media (min-width: 768px) {
+				.grid-layout {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+			@media (min-width: 1024px) {
+				.grid-layout {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+			/* 代码语法高亮 */
+			.text-green-400 { color: #4CAF50; }
+			.text-blue-300 { color: #64B5F6; }
+			.text-red-300 { color: #EF5350; }
+			.text-yellow-300 { color: #FFEE58; }
+			.text-gray-custom { color: #9E9E9E; }
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="ch intro">
+				<div class="container">
+					<div class="time-content">
+						<p>
+							<span class="year-month-day"></span>
+							<span class="week"></span>
+						</p>
+						<p class="hour-minut-second"></p>
+						<p class="lunar"></p>
+					</div>
+					<div class="hello">
+						<h1 id="longyiyiyan">:D 获取中...</h1>
+						<script src="/%E4%B8%80%E8%A8%80/" defer></script>
+						<h2>
+							<div class="circle">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+							你好呀，欢迎来到滴稳代码分享
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="ch about">
+				<div class="container">
+					<h2 class="chtitle">
+						<span> 代码分享区 </span>
+					</h2>
+					
+					<!-- 最新分享代码区域 -->
+					<section class="mb-12 code-sharing">
+					  <div class="flex items-center justify-between mb-6">
+					    <!--<h3 class="text-xl font-semibold">最新分享</h3>-->
+					    <div class="flex items-center space-x-2 view-toggle">
+					      <!--<button class="w-8 h-8 rounded-full bg-dark-light flex items-center justify-center text-gray-custom hover:text-white transition-colors duration-200 active">-->
+					      <!--  <i class="fa fa-th-large"></i>-->
+					      <!--</button>-->
+					      <!--<button class="w-8 h-8 rounded-full bg-dark flex items-center justify-center text-gray-custom hover:text-white transition-colors duration-200">-->
+					      <!--  <i class="fa fa-list"></i>-->
+					      <!--</button>-->
+					    </div>
+					  </div>
+					  
+					  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 grid-layout">
+					    <!-- 代码卡片 3 -->
+					    <div class="bg-dark-light rounded-xl overflow-hidden card-hover border border-gray-700/30 code-card">
+					      <div class="p-5">
+					        <div class="flex justify-between items-start mb-4">
+					          <div>
+					            <span class="px-2 py-1 bg-accent/10 text-accent text-xs rounded-md code-category">数据分析</span>
+					            <h4 class="text-lg font-semibold mt-2 code-title">CSV文件读取与分析</h4>
+					          </div>
+					          <!--<button class="text-gray-custom hover:text-white transition-colors duration-200">-->
+					          <!--  <i class="fa fa-star-o"></i>-->
+					          <!--</button>-->
+					        </div>
+					        
+					        <div class="bg-dark rounded-lg p-4 mb-4 overflow-x-auto scrollbar-hide code-block">
+					          <pre class="text-sm font-code text-gray-300"><span class="text-green-400">import</span> <span class="text-blue-300">pandas</span> <span class="text-green-400">as</span> <span class="text-blue-300">pd</span>
 
-{
-"wallpaper":"https://xn--zq2ao005e.u.xn--dkw.xn--6qq986b3xl/m/t/",
-"logo":"https://ncstatic-file.clewm.net/rsrc/2025/0930/20/945a6372224243d3f3d63cb309c0b7b1.png",
-"spider":"https://ncstatic-file.clewm.net/rsrc/2026/0406/21/5b2f258907bc956ee3538c9f5cdf4b83.jpg;md5;5af5edf697f25b99eb189fb800e1d098",
-"warningText":"装🅱提示:\n📢接口软件永远免费 \n📢长期维护切勿贩卖",
+<span class="text-gray-custom"># 读取CSV文件</span>
+<span class="text-blue-300">df</span> = <span class="text-blue-300">pd</span>.read_csv(<span class="text-red-300">'data.csv'</span>)
 
-"sites": [
-{"key":"豆瓣2","name":"📢马到成功、一马当先、马跃千山、马踏祥云！","type":3,"api":"csp_Douban","searchable":0},
-{"key":"豆瓣1","name":"📢公告❤停止维护 ❤","type":3,"api":"csp_Notice","searchable": 1,"jar":"https://ncstatic-file.clewm.net/rsrc/2026/0307/11/f3b31497ca266ea4f8a89c88e9385f48.jpg;md5;ff4f99fad585f4935fcaa06e3092e44a","ext": "https://xn--zq2ao005e.u.xn--dkw.xn--6qq986b3xl/m/公告?b=装🅱"},
+<span class="text-gray-custom"># 查看基本信息</span>
+<span class="text-blue-300">print</span>(<span class="text-blue-300">df</span>.info())
 
-{"key": "config", "name": "🐲歌配置｜中心","type": 3,"jar":"https://ncstatic-file.clewm.net/rsrc/2026/0307/11/0f8ea2f30bb7607d0e4603fe999b64f6.jpg;md5;fb2c84ce1e3d69aa669be42e7fd3539b","api": "csp_Config","searchable": 0},
-{"key":"配置中心","name":"❤配置｜中心","type":3,"api":"csp_Config","searchable":0,"changeable":0,"style":{"type":"rect","ratio":1.597}},
-{"key":"csp_wogg1","name":"🐲接口失效","type":3,"changeable":"0","api":"csp_Duopan","filterable":1,"jar":"https://ncstatic-file.clewm.net/rsrc/2026/0307/11/99a8688790a84bc34e00f00082776fd7.jpg;md5;95d710fd96c41285f275b40ee4272a75","ext":{"site_urls":["https://woog.nxog.eu.org"],"url_key":"csp_wogg1","threadinfo":{"chunksize":300,"threads":16}}},
-{"key":"csp_woog2","name":"🐲关注公众号","type":3,"changeable":"0","api":"csp_Duopan","filterable":1,"jar":"https://ncstatic-file.clewm.net/rsrc/2026/0307/11/0f8ea2f30bb7607d0e4603fe999b64f6.jpg;md5;fb2c84ce1e3d69aa669be42e7fd3539b","ext":{"site_urls":["https://ogkk.nxog.eu.org"],"url_key":"woog2","threadinfo":{"chunksize":281,"threads":16}}},
-{"key":"夸快3","name":"❤装歌APP","type":3,"api":"csp_PanWebShare","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"site":["https://ogkk.nxog.eu.org"]}},
-{"key":"夸快2","name":"❤后会无期","type":3,"api":"csp_PanWebShare","searchable":1,"quickSearch":1,"filterable":1,"changeable":1,"ext":{"site":["https://woog.nxog.eu.org"]}},
+<span class="text-gray-custom"># 查看数据集行数和列数</span>
+<span class="text-blue-300">rows</span>, <span class="text-blue-300">columns</span> = <span class="text-blue-300">df</span>.shape
 
+<span class="text-gray-custom"># 查看数据集行数和列数</span>
+<span class="text-green-400">if</span> <span class="text-blue-300">rows</span> &gt; <span class="text-red-300">0</span>:
+    <span class="text-gray-custom"># 显示数据集行数和列数</span>
+    <span class="text-blue-300">print</span>(<span class="text-red-300">f'数据包含 {rows} 行和 {columns} 列'</span>)
+    
+    <span class="text-gray-custom"># 显示数据集行数和列数</span>
+    <span class="text-blue-300">print</span>(<span class="text-blue-300">df</span>.head().to_string())
+<span class="text-green-400">else</span>:
+    <span class="text-blue-300">print</span>(<span class="text-red-300">'数据为空'</span>)</pre>
+					        </div>
+					        
+					        <!--<div class="flex justify-between items-center code-footer">-->
+					        <!--  <div class="flex items-center author-info">-->
+					        <!--    <img src="https://picsum.photos/seed/python3/32/32" alt="用户头像" class="w-8 h-8 rounded-full mr-2 author-avatar">-->
+					        <!--    <span class="text-sm text-gray-custom">数据分析师</span>-->
+					        <!--  </div>-->
+					        <!--  <div class="flex items-center space-x-4 text-sm text-gray-custom code-stats">-->
+					        <!--    <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 1.8k</span>-->
+					        <!--    <span class="flex items-center"><i class="fa fa-heart-o mr-1"></i> 89</span>-->
+					        <!--    <span class="flex items-center"><i class="fa fa-comment-o mr-1"></i> 15</span>-->
+					        <!--  </div>-->
+					        <!--</div>-->
+					      </div>
+					    </div>
+					    
+					    <!-- 代码卡片 4 -->
+					    <div class="bg-dark-light rounded-xl overflow-hidden card-hover border border-gray-700/30 code-card">
+					      <div class="p-5">
+					        <div class="flex justify-between items-start mb-4">
+					          <div>
+					            <span class="px-2 py-1 bg-primary/10 text-primary text-xs rounded-md code-category">自动化</span>
+					            <h4 class="text-lg font-semibold mt-2 code-title">文件批量重命名</h4>
+					          </div>
+					          <!--<button class="text-gray-custom hover:text-white transition-colors duration-200">-->
+					          <!--  <i class="fa fa-star-o"></i>-->
+					          <!--</button>-->
+					        </div>
+					        
+					        <div class="bg-dark rounded-lg p-4 mb-4 overflow-x-auto scrollbar-hide code-block">
+					          <pre class="text-sm font-code text-gray-300"><span class="text-green-400">import</span> <span class="text-blue-300">os</span>
+<span class="text-green-400">import</span> <span class="text-blue-300">re</span>
 
+<span class="text-gray-custom"># 定义文件夹路径</span>
+<span class="text-blue-300">folder_path</span> = <span class="text-red-300">'./files'</span>
 
-{"key":"push_agent","name":"📢手机｜推送","type":3,"api":"csp_Push","searchable":0,"filterable":0,"changeable":0},
-{"key": "应用商店","name": "🛒本地包更新","type": 3,"api": "csp_Market","searchable": 0,"changeable": 0,"ext": "https://xn--zq2ao005e.u.xn--dkw.xn--6qq986b3xl/zm/sd?b=装🅱"},
-{"key":"豆瓣3","name":"📢接口软件永远免费","type":3,"api":"csp_Douban","searchable":0},
-{"key":"豆瓣4","name":"📢长期维护切勿贩卖","type":3,"api":"csp_Douban","searchable":0}
-],
-"parses":[
-{"name":"-聚合-","type":3,"url":"Demo"},
-{"name":"失败手动换","type":"1","url":"https://by1.nxog.eu.org/jx.php?ou=202&mz=0&url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
-{"name":"-关注-","type":1,"url":"https://by1.nxog.eu.org/jx.php?ou=202&mz=1&url="},
-{"name":"-装歌API-","type":1,"url":"https://by1.nxog.eu.org/jx.php?ou=202&mz=2&url="},
-{"name":"-公众号-","type":1,"url":"https://by1.nxog.eu.org/jx.php?ou=202&mz=3&url="},
-{"name":"装歌APP","type":1,"url":"https://mfjx.iwsyy.xyz/?url="},
-{"name":"线路1","type":0,"url":"https://jx.xmflv.com/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(WindowsNT10.0;Win64;x64)AppleWebKit/537.36(KHTML,likeGecko)Chrome/110.0.0.0Safari/537.36Edg/110.0.1587.57"}}},
-{"name":"线路2","type":0,"url":"http://www.ckplayer.vip/jiexi/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
-{"name":"线路3","type":0,"url":"https://jx.yparse.com/index.php?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36"}}},
-{"name":"线路4","type":0,"url":"https://jx.m3u8.tv/jiexi/?url=","ext":{"header":{"user-agent":"Mozilla/5.0(Linux;Android13;V2049ABuild/TP1A.220624.014;wv)AppleWebKit/537.36(KHTML,likeGecko)Version/4.0Chrome/116.0.0.0MobileSafari/537.36","referer":"https://jiejie.uk/"}}},
-{"name":"线路5","type":0,"url":"https://cdn.zyc888.top/?url="},
-{"name":"线路6","type":0,"url":"https://bd.jx.cn/?url="},
-{"name":"线路7","type":0,"url":"https://down.nigx.cn/xjx.zzong6599.workers.dev/?url="}
-],
-"lives":[{"name":"装🅱","type":0,"url":"https://xn--zq2ao005e.u.xn--dkw.xn--6qq986b3xl/m/tv/没了","epg":"http://cdn.1678520.xyz/epg/?ch={name}&date={date}","logo":"https://gitee.com/mytv-android/myTVlogo/raw/main/img/{name}.png","playerType":2,"timeout":10},
-{"name":"冰茶","type":0,"playerType":2,"url":"https://bc.188766.xyz/?ip=&json=true","ua":"bingcha/1.1(mianfeifenxiang)"}
-],
-"headers":[{"host":"hlsztemgsplive.miguvideo.com","header":{"User-Agent":"bingcha/1.1(mianfeifenxiang)"}}],
-"proxy":["raw.githubusercontent.com"],
-"hosts":["hlsztemgsplive.miguvideo.com=hlsztemgsplive.188766.xyz","cache.ott.fifalive.itv.cmvideo.cn=fifalive.188766.xyz","iptv.huuc.edu.cn=huucv6.188766.xyz"],
-"rules":[{"name":"农民","hosts":["toutiaovod.com"],"regex":["video/tos/cn"]},{"name":"火山","hosts":["huoshan.com"],"regex":["item_id="]},{"name":"抖音","hosts":["douyin.com"],"regex":["is_play_url="]},{"name":"磁力广告","hosts":["magnet"],"regex":["更多","请访问","example","社區","xuu","直播","更新","社区","有趣","有趣","英皇体育","全中文AV在线","澳门皇冠赌场","哥哥快来","美女荷官","裸聊","新片首发","UUE29"]},{"name":"饭团点击","hosts":["dadagui","freeok","dadagui"],"script":["document.querySelector(\"#playleftiframe\").contentWindow.document.querySelector(\"#start\").click();"]},{"name":"毛驴点击","hosts":["www.maolvys.com"],"script":["document.getElementsByClassName('swal-buttonswal-button--confirm')[0].click()"]}],"doh":[{"name":"Google","url":"https://dns.google/dns-query","ips":["8.8.4.4","8.8.8.8"]},{"name":"Cloudflare","url":"https://cloudflare-dns.com/dns-query","ips":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"]},{"name":"AdGuard","url":"https://dns.adguard.com/dns-query","ips":["94.140.14.140","94.140.14.141"]},{"name":"DNSWatch","url":"https://resolver2.dns.watch/dns-query","ips":["84.200.69.80","84.200.70.40"]},{"name":"Quad9","url":"https://dns.quad9.net/dns-quer","ips":["9.9.9.9","149.112.112.112"]}],"flags":["youku","优酷","优酷","优酷视频","qq","腾讯","腾讯","腾讯视频","iqiyi","qiyi","奇艺","爱奇艺","爱奇艺","m1905","xigua","letv","leshi","乐视","乐视","sohu","搜狐","搜狐","搜狐视频","tudou","pptv","mgtv","芒果","imgo","芒果TV","芒果TV","bilibili","哔哩","哔哩哔哩"],"ijk":[{"group":"软解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"0"},{"category":4,"name":"mediacodec-auto-rotate","value":"0"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"0"},{"category":4,"name":"mediacodec-hevc","value":"0"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]},{"group":"硬解码","options":[{"category":4,"name":"opensles","value":"0"},{"category":4,"name":"overlay-format","value":"842225234"},{"category":4,"name":"framedrop","value":"1"},{"category":4,"name":"soundtouch","value":"1"},{"category":4,"name":"start-on-prepared","value":"1"},{"category":1,"name":"http-detect-range-support","value":"0"},{"category":1,"name":"fflags","value":"fastseek"},{"category":2,"name":"skip_loop_filter","value":"48"},{"category":4,"name":"reconnect","value":"1"},{"category":4,"name":"enable-accurate-seek","value":"0"},{"category":4,"name":"mediacodec","value":"1"},{"category":4,"name":"mediacodec-auto-rotate","value":"1"},{"category":4,"name":"mediacodec-handle-resolution-change","value":"1"},{"category":4,"name":"mediacodec-hevc","value":"1"},{"category":1,"name":"dns_cache_timeout","value":"600000000"}]}],"ads":["static-mozai.4gtv.tv"]
+<span class="text-gray-custom"># 遍历文件夹中的所有文件</span>
+<span class="text-green-400">for</span> <span class="text-blue-300">filename</span> <span class="text-green-400">in</span> <span class="text-blue-300">os</span>.listdir(<span class="text-blue-300">folder_path</span>):
+    <span class="text-gray-custom"># 获取文件扩展名</span>
+    <span class="text-blue-300">name</span>, <span class="text-blue-300">ext</span> = <span class="text-blue-300">os</span>.path.splitext(<span class="text-blue-300">filename</span>)
+    
+    <span class="text-gray-custom"># 使用正则表达式移除特殊字符</span>
+    <span class="text-blue-300">new_name</span> = <span class="text-blue-300">re</span>.sub(<span class="text-red-300">'[^a-zA-Z0-9]'</span>, <span class="text-red-300">'_'</span>, <span class="text-blue-300">name</span>)
+    
+    <span class="text-gray-custom"># 构建新的文件名</span>
+    <span class="text-blue-300">new_filename</span> = <span class="text-blue-300">new_name</span> + <span class="text-blue-300">ext</span>
+    
+    <span class="text-gray-custom"># 构建旧文件和新文件的完整路径</span>
+    <span class="text-blue-300">old_path</span> = <span class="text-blue-300">os</span>.path.join(<span class="text-blue-300">folder_path</span>, <span class="text-blue-300">filename</span>)
+    <span class="text-blue-300">new_path</span> = <span class="text-blue-300">os</span>.path.join(<span class="text-blue-300">folder_path</span>, <span class="text-blue-300">new_filename</span>)
+    
+    <span class="text-gray-custom"># 重命名文件</span>
+    <span class="text-blue-300">os</span>.rename(<span class="text-blue-300">old_path</span>, <span class="text-blue-300">new_path</span>)
+    <span class="text-blue-300">print</span>(<span class="text-red-300">f"已重命名: {filename} -&gt; {new_filename}"</span>)</pre>
+					        </div>
+					        
+					        <!--<div class="flex justify-between items-center code-footer">-->
+					        <!--  <div class="flex items-center author-info">-->
+					        <!--    <img src="https://picsum.photos/seed/python4/32/32" alt="用户头像" class="w-8 h-8 rounded-full mr-2 author-avatar">-->
+					        <!--    <span class="text-sm text-gray-custom">自动化工程师</span>-->
+					        <!--  </div>-->
+					        <!--  <div class="flex items-center space-x-4 text-sm text-gray-custom code-stats">-->
+					        <!--    <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 1.2k</span>-->
+					        <!--    <span class="flex items-center"><i class="fa fa-heart-o mr-1"></i> 73</span>-->
+					        <!--    <span class="flex items-center"><i class="fa fa-comment-o mr-1"></i> 12</span>-->
+					        <!--  </div>-->
+					        <!--</div>-->
+					      </div>
+					    </div>
+					    
+					    <!-- 代码卡片 5 -->
+					    <div class="bg-dark-light rounded-xl overflow-hidden card-hover border border-gray-700/30 code-card">
+					      <div class="p-5">
+					        <div class="flex justify-between items-start mb-4">
+					          <div>
+					            <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs rounded-md code-category">爬虫</span>
+					            <h4 class="text-lg font-semibold mt-2 code-title">简单的网页爬虫</h4>
+					          </div>
+					          <!--<button class="text-gray-custom hover:text-white transition-colors duration-200">-->
+					          <!--  <i class="fa fa-star-o"></i>-->
+					          <!--</button>-->
+					        </div>
+					        
+					        <div class="bg-dark rounded-lg p-4 mb-4 overflow-x-auto scrollbar-hide code-block">
+					          <pre class="text-sm font-code text-gray-300"><span class="text-green-400">import</span> <span class="text-blue-300">requests</span>
+<span class="text-green-400">from</span> <span class="text-blue-300">bs4</span> <span class="text-green-400">import</span> <span class="text-blue-300">BeautifulSoup</span>
 
-//**本接口免费分享给小白测试和学习使用，请勿用于违法用途，如有冒犯请联系删除，谨防上当受骗。<请勿相信视频中广告>
+<span class="text-gray-custom"># 目标URL</span>
+<span class="text-blue-300">url</span> = <span class="text-red-300">'https://example.com'</span>
 
+<span class="text-gray-custom"># 设置请求头，模拟浏览器访问</span>
+<span class="text-blue-300">headers</span> = {
+    <span class="text-red-300">'User-Agent'</span>: <span class="text-red-300">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'</span>
 }
+
+<span class="text-gray-custom"># 发送HTTP请求</span>
+<span class="text-blue-300">response</span> = <span class="text-blue-300">requests</span>.get(<span class="text-blue-300">url</span>, <span class="text-blue-300">headers</span>=<span class="text-blue-300">headers</span>)
+
+<span class="text-gray-custom"># 检查响应状态码</span>
+<span class="text-green-400">if</span> <span class="text-blue-300">response</span>.status_code == <span class="text-red-300">200</span>:
+    <span class="text-gray-custom"># 解析HTML内容</span>
+    <span class="text-blue-300">soup</span> = <span class="text-blue-300">BeautifulSoup</span>(<span class="text-blue-300">response</span>.text, <span class="text-red-300">'html.parser'</span>)
+    
+    <span class="text-gray-custom"># 提取所有链接</span>
+    <span class="text-blue-300">links</span> = <span class="text-blue-300">soup</span>.find_all(<span class="text-red-300">'a'</span>)
+    
+    <span class="text-gray-custom"># 打印所有链接</span>
+    <span class="text-green-400">for</span> <span class="text-blue-300">link</span> <span class="text-green-400">in</span> <span class="text-blue-300">links</span>:
+        <span class="text-blue-300">href</span> = <span class="text-blue-300">link</span>.get(<span class="text-red-300">'href'</span>)
+        <span class="text-blue-300">text</span> = <span class="text-blue-300">link</span>.get_text()
+        <span class="text-blue-300">print</span>(<span class="text-red-300">f"文本: {text}, URL: {href}"</span>)
+<span class="text-green-400">else</span>:
+    <span class="text-blue-300">print</span>(<span class="text-red-300">f"请求失败，状态码: {response.status_code}"</span>)</pre>
+					        </div>
+					        
+					        <!--<div class="flex justify-between items-center code-footer">-->
+					        <!--  <div class="flex items-center author-info">-->
+					        <!--    <img src="https://picsum.photos/seed/python5/32/32" alt="用户头像" class="w-8 h-8 rounded-full mr-2 author-avatar">-->
+					        <!--    <span class="text-sm text-gray-custom">全栈开发者</span>-->
+					        <!--  </div>-->
+					        <!--  <div class="flex items-center space-x-4 text-sm text-gray-custom code-stats">-->
+					        <!--    <span class="flex items-center"><i class="fa fa-eye mr-1"></i> 2.1k</span>-->
+					        <!--    <span class="flex items-center"><i class="fa fa-heart-o mr-1"></i> 105</span>-->
+					        <!--    <span class="flex items-center"><i class="fa fa-comment-o mr-1"></i> 18</span>-->
+					        <!--  </div>-->
+					        <!--</div>-->
+					      </div>
+					    </div>
+					  </div>
+					 
+					</section>
+					<!-- 最新分享代码区域结束 -->
+
+					<div class="clear">
+						<div class="introduct">
+							<img class="avatar" src="static/picture/yiyi.png">
+							<p> 人生的路上，最美的风景在身边，最深厚的情感在心底。 </p>
+							<p> 简单，是内心里的从容和淡定，对于生活不苛求太多，懂得宽容，安然素淡，那份恬淡就像轻轻走过的岁月，不染风尘，心若简单纯净，则万物皆美。 </p>
+							<p> 生活原本静谧，又何必把它搞得乌烟瘴气，静静地走过生活，不刻意留下什么痕迹，或许会更好。生活还需努力，只是不必刻意。花开枝头不是一蹴而就、一劳永逸，美丽只在于绽放的过程，没那么多高低。 </p>
+							<p> 茫茫人海，感恩与你不期而遇。 </p>
+							<div class="chatbox">
+								<div class="line loading">
+
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+						</div>
+						<ul class="skill clear">
+							<li>
+								<p>梦想实现</p>
+								<div class="progress">
+									<div style="width:46%;"></div>
+									<span>相距很远 努力实现</span>
+								</div>
+							</li>
+							<li>
+								<p>生活态度</p>
+								<div class="progress">
+									<div style="width:70%;"></div>
+									<span>颇为满意 小有不足</span>
+								</div>
+							</li>
+							<li>
+								<p>未来期望</p>
+								<div class="progress">
+									<div style="width:78%;"></div>
+									<span>实现理想 彼此幸福~</span>
+								</div>
+							</li>
+							<li>
+								<p>迷茫指数</p>
+								<div class="progress">
+									<div style="width:33%;"></div>
+									<span>时而清醒 时而迷茫</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+						<div class="gate ch">
+				<div class="container links">
+					<h2 class="chtitle"><span>龙伊推荐一些热门网站，好用的工具。</span>
+					</h2>
+					<div class="clear col-3">
+						<a href="https://mp.weixin.qq.com/s/k8yuz46Utoa5S0jj6NhMPg" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/app.png">
+								</div>
+								<div class="inner">
+									<h5>龙伊和他的朋友</h5>
+									<p>龙伊的公众号</p>
+								</div>
+							</div>
+						</a>
+						<a href="/static/dcjk.html" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/app.png">
+								</div>
+								<div class="inner">
+									<h5>接口大全</h5>
+									<p>接口大全</p>
+								</div>
+							</div>
+						</a>
+						<a href="/加密" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/app.png">
+								</div>
+								<div class="inner">
+									<h5>加密解密助手</h5>
+									<p>TVBox接口加密解密助手</p>
+								</div>
+							</div>
+						</a>
+						<a href="http://lonii.cn" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/app.png">
+								</div>
+								<div class="inner">
+									<h5>智能整理助手</h5>
+									<p>超级好用的节目名称整理助手</p>
+								</div>
+							</div>
+						</a>
+						<!--<a href="http://www.xn--kwr743m.top/" target="_blank">-->
+						<!--	<div class="item">-->
+						<!--		<div class="avatar">-->
+						<!--			<img src="static/picture/8626fa5aba08939fbe12f3ee6837059.png">-->
+						<!--		</div>-->
+						<!--		<div class="inner">-->
+						<!--			<h5>陆哥数码</h5>-->
+						<!--			<p>搞数码的风流教父</p>-->
+						<!--		</div>-->
+						<!--	</div>-->
+						<!--</a>-->
+						<a href="https://mp.weixin.qq.com/s/ixYMB1YEKvTTjkSYLd58Yg" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/czlogo.png">
+								</div>
+								<div class="inner">
+									<h5>一个橙子pro</h5>
+									<p>一直在开发各种好用工具的公众号</p>
+								</div>
+							</div>
+						</a>						
+						<a href="https://zx.li0580.com" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/4135e28f5aa90c44ed05b654865cdbe.jpg">
+								</div>
+								<div class="inner">
+									<h5>路人甲资源站</h5>
+									<p>路人甲120秒带你看世界</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://www.摸鱼儿.com/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="https://ricolj.github.io/tp/moyu.png">
+								</div>
+								<div class="inner">
+									<h5>摸鱼主页</h5>
+									<p>这个学生不简单</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://rong.us.kg/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="../static/picture/azhao.png">
+								</div>
+								<div class="inner">
+									<h5>海阔小白主页</h5>
+									<p>海阔任鱼跃，天高任鸟飞</p>
+								</div>
+							</div>
+						</a>
+						<a href="http://集多.影.top/home/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="https://ricolj.github.io/tp/jd.jpg">
+								</div>
+								<div class="inner">
+									<h5>集多导航</h5>
+									<p>短剧极多</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://blog.szyyds.cn/fongmi.html" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/ystv.md.png">
+								</div>
+								<div class="inner">
+									<h5>FongMI影视</h5>
+									<p>FongMI影视下载</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://github.com/catvod/CatVodOpen/releases" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/937b6048b0104ce0c25ad.png">
+								</div>
+								<div class="inner">
+									<h5>猫影视</h5>
+									<p>猫大佬系列下载</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://bbs.binmt.cc" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/eabfe3401bdb58d6b9aa8.png">
+								</div>
+								<div class="inner">
+									<h5>MT论坛</h5>
+									<p>MT管理器官方论坛</p>
+
+								</div>
+							</div>
+						</a>
+						<a href="https://tvfan.xxooo.cf/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/WoGG.png">
+								</div>
+								<div class="inner">
+									<h5>玩偶哥哥</h5>
+									<p>阿里资源分享站</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://www.xmwav.com/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/4a7ce0e301b21281d24f4.jpg">
+								</div>
+								<div class="inner">
+									<h5>熊猫无损</h5>
+									<p>无损音乐下载</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://wallhaven.cc/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/84586e8b64abeb02ce5c1.png">
+								</div>
+								<div class="inner">
+									<h5>高清壁纸下载</h5>
+									<p>海量的高清壁纸</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://ps.gitapp.cn" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/d04a5633e8e0f2b2b126e.jpg">
+								</div>
+								<div class="inner">
+									<h5>PS网页版</h5>
+									<p>在线PS</p>
+								</div>
+							</div>
+						</a>
+						<a href="http://qiqiv.cn/tvbox/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/tnb.png">
+								</div>
+								<div class="inner">
+									<h5>接口配置</h5>
+									<p>接口配置编辑解密</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://my.ksust.com/kstore.htm?aff=6160" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="https://my.ksust.com/view/img/logo.png">
+								</div>
+								<div class="inner">
+									<h5>凯速外链网盘</h5>
+									<p>一个好用的外链网盘</p>
+								</div>
+
+							</div>
+						</a>
+
+						<a href="https://www.foodieguide.com/iptvsearch/" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/iptv.png">
+								</div>
+								<div class="inner">
+									<h5>搜索引擎</h5>
+									<p>搜索</p>
+								</div>
+							</div>
+						</a>
+						<a href="https://guihet.com/tvlistconvert.html" target="_blank">
+							<div class="item">
+								<div class="avatar">
+									<img src="static/picture/zbzh.webp">
+								</div>
+								<div class="inner">
+									<h5>格式转换</h5>
+									<p>转换工具</p>
+								</div>
+							</div>
+						</a>
+					</div>
+			
+
+					<!--底部波浪-->
+					<div id="hans-bolang"></div>
+					<script src="static/js/bolang1.js"></script>
+				</div>
+				<div class="push"></div>
+				<!--push在此为footer占位，高度和footer的一样-->
+			
+			<div class="footer ch">
+				<div class="container">
+					<h3>星辰大海 不负韶华</h3>
+					<h4>© 2024 Powered by 龙伊</h4>
+
+					<!-- 显示建站时间(注意:原来是居中显示,下面修改成style="text-align: center;-->
+					<span id="runtime_span" style="color: #808080;"></span>
+					<!-- 显示建站时间-->
+					<!--备案-->
+					<div style="width:300px;margin:0 auto;text-align:left;white-space: nowrap;">
+						<a href="https://beian.mps.gov.cn/#/query/webSearch?code=44140302000240" target="_blank" style="text-decoration:none;" rel="noopener">
+							<img src="/static/img/备案图标.png" style="width:16px;height:16px;vertical-align:middle;">
+							<span style="color:#939393;font-size:12px;vertical-align:middle;">粤公网安备44140302000240</span>&nbsp;
+						</a>
+						<img src="/static/img/ICP.png" style="width:16px;height:16px;vertical-align:middle;">
+						<a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration:none;" rel="noopener">
+							<span style="color:#939393;font-size:12px;vertical-align:middle;">粤ICP备2024331761号-1</span>
+							
+					<!--备案-->
+						</a>
+					</div>
+				</div>
+			</div>
+
+		<script async="" src="static/js/gtag.js"></script>		<!--!‫‭‬‫‬‪‫‭‬‫‬‬‭‫‭‭‪‭‫‬‪‬‫-->
+		<script async="" src="static/js/weizhi-1.js"></script>	
+
+		<script src="static/js/page.3a0791a31.js"></script>
+		<!--以下为点击复制调用js-->
+		<!--<script src="static/js/jquery.min.js"></script>-->
+		<!--播放器-->
+		<script src="static/js/clipboard.min.js"></script>
+		<!--时间-->
+		<script src="static/js/zhuyefuzhi.js"></script>
+		<!--时间-->
+		<script src="static/js/yunweishijian.js"></script>
+		<!--运维时间-->
+		<!--播放器-->
+		<!--<script id="myhk" src="https://myhkw.cn/api/player/171025389183" key="171025389183" m="1"></script>
+    <div id="myhk"></div>-->
+		<script type="text/javascript" id="myhk" src="https://myhkw.cn/api/player/171025389183" key="171025389183" m="1"></script>
+		<script src="static/js/lunar.min.js"></script>
+		<script src="static/js/xingqi.js"></script>
+		<!--时间-->
+		<script src="static/js/dayjs.min.js"></script>
+		<!--樱花随风飘落特效-->
+		<script src="static/js/sakura.js"></script>
+
+		<!-- 代码卡片交互脚本 -->
+		<script>
+			// 代码卡片悬停效果
+			document.querySelectorAll('.code-card').forEach(card => {
+				card.addEventListener('mouseenter', () => {
+					card.style.transform = 'translateY(-5px)';
+					card.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.1)';
+				});
+				
+				card.addEventListener('mouseleave', () => {
+					card.style.transform = 'translateY(0)';
+					card.style.boxShadow = 'none';
+				});
+			});
+			
+			// 视图切换功能
+			const viewButtons = document.querySelectorAll('.view-btn');
+			const gridContainer = document.querySelector('.grid-layout');
+			
+			viewButtons.forEach(button => {
+				button.addEventListener('click', () => {
+					// 移除所有按钮的活跃状态
+					viewButtons.forEach(btn => btn.classList.remove('active'));
+					// 为当前点击的按钮添加活跃状态
+					button.classList.add('active');
+					
+					// 根据按钮切换视图
+					if (button.querySelector('.fa-th-large')) {
+						gridContainer.classList.add('grid-cols-1', 'md:grid-cols-2', 'lg:grid-cols-3');
+					} else {
+						gridContainer.classList.remove('md:grid-cols-2', 'lg:grid-cols-3');
+						gridContainer.classList.add('grid-cols-1');
+					}
+				});
+			});
+			
+			// 代码复制功能
+// 			document.querySelectorAll('.code-block').forEach((block, index) => {
+// 				const copyBtn = document.createElement('button');
+// 				copyBtn.className = 'absolute top-2 right-2 bg-dark-light text-gray-custom hover:text-white p-2 rounded transition-colors';
+// 				copyBtn.innerHTML = '<i class="fa fa-copy"></i>';
+// 				copyBtn.title = '复制代码';
+				
+// 				// 找到代码块的容器并设置相对定位
+// 				const container = block.parentElement;
+// 				container.style.position = 'relative';
+				
+// 				// 添加复制按钮
+// 				container.appendChild(copyBtn);
+				
+// 				// 复制功能
+// 				copyBtn.addEventListener('click', () => {
+// 					const code = block.textContent;
+// 					navigator.clipboard.writeText(code).then(() => {
+// 						// 显示复制成功提示
+// 						copyBtn.innerHTML = '<i class="fa fa-check"></i>';
+// 						copyBtn.classList.add('text-accent');
+						
+// 						setTimeout(() => {
+// 							copyBtn.innerHTML = '<i class="fa fa-copy"></i>';
+// 							copyBtn.classList.remove('text-accent');
+// 						}, 2000);
+// 					});
+// 				});
+// 			});
+		</script>
+
+
+	</body>
+
+</html>
+<!--!‫‭‬‫‬‪‫‭‬‫‬‬‭‫‭‭‪‭‫‬‪‬‫-->
