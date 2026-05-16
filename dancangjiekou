@@ -3347,13 +3347,13 @@
         {
              "name": "拾光频道",
              "type": 0,
-             "url": "https://gh.xxooo.cf/https://raw.githubusercontent.com/13012181672/svip/refs/heads/main/okzhibo.txt",
+             "url": "./FM.json",
              "playerType": 1
          },
 {
             "name": "AI拾光",
             "type": 0,
-            "url": "https://gh.xxooo.cf/https://raw.githubusercontent.com/13012181672/svip/refs/heads/main/okzhibo.txt",
+            "url": "https://ghproxy.net/raw.githubusercontent.com/xmbjm/IPTV/master/output/user_result.txt",
             "epg": "http://cdn.1678520.xyz/epg/?ch={name}&date={date}",
             "logo": "https://live.fanmingming.cn/tv/{name}.png",
             "playerType": 2,
