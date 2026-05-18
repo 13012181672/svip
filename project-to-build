@@ -278,7 +278,7 @@
             "key": "📺┃︎剧王┃短剧",
             "name": "📺┃剧王┃短剧",
             "type": 3,
-            "api": "./api/JWDJ.py",
+            "api": "https://gh-proxy.org/https://raw.githubusercontent.com/13012181672/PZ/refs/heads/main/feimao/JWDJ.py",
             "searchable": 1,
             "changeable": 1,
             "quickSearch": 1,
