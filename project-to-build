@@ -380,7 +380,7 @@
             "key": "drpy_js_310直播",
             "name": "🏀┃体育┃直播",
             "type": 3,
-            "api": "./api/drpy2.min.js",
+            "api": "https://gh-proxy.org/https://raw.githubusercontent.com/13012181672/PZ/refs/heads/main/feimao/drpy2.min.js",
             "changeable": 0,
             "gridview": 3,
             "style": {
@@ -406,7 +406,7 @@
             "key": "儿童",
             "name": "📚┃儿童┃启蒙",
             "type": 3,
-            "api": "./api/drpy2.min.js",
+            "api": "https://gh-proxy.org/https://raw.githubusercontent.com/13012181672/PZ/refs/heads/main/feimao/drpy2.min.js",
             "searchable": 0,
             "quickSearch": 0,
             "changeable": 0,
